@@ -1,6 +1,6 @@
 <template>
     <div class="portfolio">
-        <h1 class="portfolio-title">My Game Development Portfolio</h1>
+        <h1 class="portfolio-title">Some of my works</h1>
 
         <div class="experience">
             <div class="exp">
@@ -34,15 +34,6 @@
                 </div>
             </div>
 
-            <div class="exp">
-                <h2>HTML5 Educational Game (Freelance, 2019)</h2>
-                <p>
-                    Made math games using Unity to target WebGL. I also designed the gameplay and user interactions. Art by <a href="https://www.instagram.com/hyuei/">Jeffin</a>
-                </p>
-                <div class="showcase">
-                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/eqAd5YZGGpA?si=j11vEl2CRFz_AC1D" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
 
             <div class="exp">
                 <h2>What Comes After (Fahmitsu x RGB Jam, 2020)</h2>
@@ -60,6 +51,21 @@
             </div>
 
             <div class="exp">
+                <h2>AfterLove:EP (Pikselnesia, 2020-now)</h2>
+                <p>
+                    Contributed as Unity, DevOps, and tools programmer
+                </p>
+                <div class="showcase">
+                    <div>
+                        <img src="../assets/afterlove_ep.jpg" alt="Afterlove EP Game">
+                    </div>
+                    <div>
+                        🔗 <a href="https://store.steampowered.com/app/1599780/Afterlove_EP/" target="_blank">Steam</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exp">
                 <h2>Bus Simulator Indonesia (Maleo, 2017)</h2>
                 <p>
                     Contributed as game and tools programmer. Implemented and scripted API calls using Playfab's CloudScript. I also implemented multiplayer gameplay utilizing Photon.
@@ -71,6 +77,16 @@
                     <div>
                         🔗 <a href="https://play.google.com/store/apps/details?id=com.maleo.bussimulatorid&hl=in&gl=US&pli=1" target="_blank">PlayStore</a>
                     </div>
+                </div>
+            </div>
+
+            <div class="exp">
+                <h2>HTML5 Educational Game (Freelance, 2019)</h2>
+                <p>
+                    Made math games using Unity to target WebGL. I also designed the gameplay and user interactions. Art by <a href="https://www.instagram.com/hyuei/">Jeffin</a>
+                </p>
+                <div class="showcase">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/eqAd5YZGGpA?si=j11vEl2CRFz_AC1D" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -161,6 +177,7 @@
 .showcase img, .showcase iframe {
     border-radius: 8px;
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .showcase img:hover, .showcase iframe:hover {
