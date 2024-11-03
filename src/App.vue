@@ -128,6 +128,7 @@ footer {
 
 .content{
   margin: 15px auto;
+  padding: 15px;
   max-width: 600px;
   text-wrap: pretty;
 
