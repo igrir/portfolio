@@ -1,6 +1,8 @@
 <template>
     <div class="portfolio">
-        <h1 class="portfolio-title">Some of my works</h1>
+        
+
+        <h1 class="portfolio-title">🎮 Games</h1>
 
         <div class="experience">
             <div class="exp">
@@ -105,6 +107,26 @@
                 </div>
             </div>
 
+            <h1 class="portfolio-title">🖥️ Applications</h1>
+
+            <div class="exp">
+                <h2>GIMid (Personal Project, 2024)</h2>
+                <p>
+                    A platform for sharing game development technical knowledge. Made frontend using NUXT and backend using Appwrite
+                </p>
+                <div class="showcase">
+                    <div>
+                        <img src="../assets/porto_gimid.png" alt="GIMid.dev">
+                    </div>
+                    <div>
+                        🔗 <a href="https://gimid.dev" target="_blank">gimid.dev</a>
+                    </div>
+                    <div>
+                        🔗 <a href="https://github.com/gimid/warga" target="_blank">github</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="exp">
                 <h2>Assemblr Studio (Assemblr, 2020)</h2>
                 <p>
@@ -116,6 +138,9 @@
                     </div>
                 </div>
             </div>
+
+
+            <h1 class="portfolio-title">🛝 Miscellaneous</h1>
 
             <div class="exp">
                 <h2>RawiTween, a tween library for Unity</h2>
@@ -148,6 +173,27 @@
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    
+    
+    background: linear-gradient(135deg, #ff4b1f, #1fddff); /* Gradient background */
+    background-size: 300% 200%;
+    background-position: 0% 50%;
+
+    animation: pulse 3s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
 }
 
 .experience {
@@ -155,7 +201,7 @@
 }
 
 .exp {
-    border-bottom: 1px solid #535353;
+    border-bottom: 1px dashed #535353;
     padding: 20px 0;
 }
 

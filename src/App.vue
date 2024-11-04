@@ -14,7 +14,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #e0e0e0;
-  background-color: #1e1e1e;
+  background-color: #444444;
 }
 
 /* Container */
@@ -140,12 +140,124 @@ img {
   border-radius: 10px;
 }
 
+.ascii{
+    white-space: pre;
+    font-family: monospace;
+    font-size: 5px;
+    line-height: 5px;
+    letter-spacing: unset;
+    transform: unset;
+    overflow-y: hidden;
+
+    /* background-color: #fff; */
+    color: #000;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+}
+
+
+#ascii-container{
+  text-align: center;
+}
+
+#ascii-art{
+  width: 130px;
+  height: 140px;
+  /* background-color: #2b2b2b; */
+  display: inline-block;
+  text-align: left;
+}
+
+.hoverable a:hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+.writer{
+  color: #fff;
+}
+
+/* .hoverable a:visited{
+  color: #000;
+} */
+
+.hoverable a{
+  text-decoration: none;
+  color: #000;
+}
+
 
 </style>
+
+<script setup>
+import { onMounted } from 'vue';
+
+
+onMounted(()=> {
+  const asciiText = document.getElementById("ascii-art");
+    const textContent = asciiText.textContent;
+    asciiText.textContent = ""; // Clear initial content
+
+    asciiText.style.opacity = 1; // Make container visible
+
+    let index = 0;
+
+    let writtenText = "";
+    function revealCharacters() {
+        if (index < textContent.length - 1) {
+            // asciiText.innerHTML += textContent[index] + "<span class='writer'>|</span>";
+            writtenText += textContent[index]
+            asciiText.innerHTML = writtenText + "<span class='writer'>|</span>";
+
+            index++;
+            setTimeout(revealCharacters, 10); // Adjust the delay for speed
+        }else{
+          asciiText.innerHTML = writtenText
+        }
+    }
+
+    revealCharacters();
+
+});
+</script>
 
 <template>
   <nav>
     <div class="header-bar">
+
+      <div id="ascii-container">
+<pre class="ascii" id="ascii-art">
+             =+++++++**-            
+         =##***##########*#*        
+     +**#**%%%%%%%%%%%%%%%%##%      
+   :+#%%#*#%#+-::...::=*#%@@%%%=    
+  :####@%#+=:.          ..-%%%@@%   
+ +#%%%@@+-..             ..:+%@@@=  
+ %#@@%%#:.                ..:*@@@@  
+=#%%@@%-..       ..     . ..::--@@. 
++%@@@%=  :---+***==-:::-=+####*=+@: 
+ %@@%=. .::.:::--=+=--+*+=-----+=@  
+ %%%#-..:=*#%%@@%%=:. -=#%@@@@@#=#: 
+  %%#-:--..:=*#*=-..  :-=####+--=+: 
+  .-#-:::.     .-:..   .--.   .:-+. 
+ *--+-::..  .:-+=..::::---==::::--  
+  .=--::::::-++=:=%%%**%%#==+=--=-  
+   :.-:----=+*+==*=+##%%#%%*++==+-  
+   ..--:-===+%#+++++++++**##@+=+=-  
+    =+=:--=-=@@=.         -@@*=+==  
+      +=-=====-=%%%%%%%%@@*+#++++   
+      .+=====-::--.:::.::-+==+++:   
+       *#+===-::-==+++++**+==++=    
+        -#*+=-:..-=+*%@%#*===*+     
+         *@%#*-::.:=+**+=--=%@      
+         -+%@@@#*+**#%%####@@@@@.   
+      +@@--=*%@@@@@@@@@@@@@@#+@@@%#=
+ =**%@@@==---=+%%@@@@@@@@@@*+%@@@@#@
+ @igrir.bsky.social
+    </pre>
+  </div>
+
       <div class="header-links">
         <RouterLink to="/">&gt; Home</RouterLink>
         <RouterLink to="/portfolio">&gt; Portfolio</RouterLink>
